@@ -44,8 +44,8 @@ class DataPreparator():
         self.test_fold_index = config.split_settings[split_number]["test_index"]
         setting = f"{task}/val-{self.val_fold_index}_test-{self.test_fold_index}/"
 
-        self.load_dir = os.path.join(config.root, config.dirname_ptbxl, "raw")
-        self.save_dir = os.path.join(config.root, config.dirname_ptbxl, setting)
+        self.load_dir = os.path.join(config.data_root, config.dirname_ptbxl, "raw")
+        self.save_dir = os.path.join(config.data_root, config.dirname_ptbxl, setting)
         os.makedirs(self.save_dir, exist_ok=True)
 
     def _split_data(self, data: np.ndarray, labels: np.ndarray, y_data: np.ndarray):

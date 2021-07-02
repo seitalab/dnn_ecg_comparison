@@ -1,4 +1,5 @@
 root = "/home/nonaka/git/dnn_ecg_comparison"
+data_root = f"{root}/data"
 
 dirname_ptbxl = "PTBXL"
 dirname_g12ec = "G12EC"
