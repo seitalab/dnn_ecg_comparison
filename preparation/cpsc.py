@@ -134,6 +134,6 @@ if __name__ == "__main__":
 
     SAMPLING_FREQUENCY = 500
     for seed in range(1, 6):
-        print(f"Working on split_number: {split_number} ...")
+        print(f"Working on split_number: {seed} ...")
         preparator = CPSCPreparator(SAMPLING_FREQUENCY, seed)
         preparator.prepare()
