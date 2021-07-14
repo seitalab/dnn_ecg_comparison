@@ -10,7 +10,7 @@ sys.path.append("..")
 import config
 from execute_eval_multiclass import EvalExecuterMC
 from execute_train_multiclass import TrainExecuterMC
-from execute_clf_multiseed import MultiLabelClfExecuter
+from execute_clf_multilabel import MultiLabelClfExecuter
 
 colnames = ["task", "dataset", "seed", "Mean score", "Bootstrap mean",
             "Bootstrap 5%", "Bootstrap 95%", "save_loc"]

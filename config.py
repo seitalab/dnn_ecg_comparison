@@ -46,6 +46,7 @@ split_settings = {
         "test_index": 2,
     },
 }
+SEEDS = list(split_settings.keys())
 
 # Common
 num_epochs = 5
