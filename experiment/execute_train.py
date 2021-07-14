@@ -20,7 +20,7 @@ class TrainExecuter(BaseExecuter):
 
         self.args = args
         if args.task in config.TASKS:
-            self.data_loc = os.path.join(config.root, config.dirname, args.task)
+            self.data_loc = os.path.join(config.root, config.dirname_ptbxl, args.task)
         elif args.task == "g12ec":
             self.data_loc = os.path.join(
                 config.root, config.dirname_g12ec, "processed")
