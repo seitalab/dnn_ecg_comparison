@@ -2,7 +2,7 @@
 root = "/export/work/users/nonaka"
 # data_root = f"{root}/data"
 data_root = f"{root}"
-save_dir = "."
+save_dir = "./result"
 
 dirname_ptbxl = "PTBXL"
 dirname_g12ec = "G12EC"
@@ -48,7 +48,7 @@ split_settings = {
 }
 
 # Common
-num_epochs = 250
+num_epochs = 5
 freq = 500
 length = 2.5
 optimizer = "adam"

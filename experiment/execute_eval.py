@@ -26,7 +26,7 @@ class EvalExecuter(TrainExecuter):
         self.evaluator = Evaluator(device)
 
         if self.args.task in config.TASKS:
-            self.data_loc = os.path.join(config.root, config.dirname, self.args.task)
+            self.data_loc = os.path.join(config.root, config.dirname_ptbxl, self.args.task)
         elif self.args.task == "g12ec":
             self.data_loc = os.path.join(
                 config.root, config.dirname_g12ec, "processed")
