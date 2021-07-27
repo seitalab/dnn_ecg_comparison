@@ -28,7 +28,8 @@ class EvalExecuterMC(TrainExecuterMC):
         self.evaluator = Evaluator(device)
 
         if dataset == "ptbxl":
-            self.data_loc = os.path.join(config.root, config.dirname, "all")
+            self.data_loc = os.path.join(
+                config.root, config.dirname_ptbxl, "all")
         elif dataset == "g12ec":
             self.data_loc = os.path.join(
                 config.root, config.dirname_g12ec, "processed")
