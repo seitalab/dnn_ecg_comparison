@@ -25,7 +25,8 @@ class TrainExecuterMC(BaseExecuter):
         self.args = args
         self.dataset = dataset
         if dataset == "ptbxl":
-            self.data_loc = os.path.join(config.root, config.dirname, "all")
+            self.data_loc = os.path.join(
+                config.root, config.dirname_ptbxl, "all")
         elif dataset == "g12ec":
             self.data_loc = os.path.join(
                 config.root, config.dirname_g12ec, "processed")
