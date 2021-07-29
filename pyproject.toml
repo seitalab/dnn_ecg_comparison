@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "dnn_ecg_comparison"
 version = "1.0.0"
-description = ""
-authors = ["nnknk0802 <yatsugatake_nnk@yahoo.co.jp>"]
+description = "Code used for In-depth Benchmarking of Deep Neural Network Architectures for ECG Diagnosis."
+authors = ["Naoki Nonaka <yatsugatake_nnk@yahoo.co.jp>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
