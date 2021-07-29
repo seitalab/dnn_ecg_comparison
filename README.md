@@ -1,7 +1,8 @@
 # In-depth Benchmarking of Deep Neural Network Architectures for ECG Diagnosis.
 
 Code used for In-depth Benchmarking of Deep Neural Network Architectures for ECG Diagnosis.
-(Part of our code is adopted from https://github.com/helme/ecg_ptbxl_benchmarking.)
+
+(Part of our code is adopted from [Deep Learning for ECG Analysis: Benchmarks and Insights from PTB-XL](https://github.com/helme/ecg_ptbxl_benchmarking).)
 
 ## Setup
 
@@ -14,7 +15,9 @@ Code used for In-depth Benchmarking of Deep Neural Network Architectures for ECG
 cd preparation
 ./get_dataset.sh
 ```
-For G12EC dataset, manually download from [link](https://www.kaggle.com/bjoernjostein/georgia-12lead-ecg-challenge-database/metadata).
+This scripts downloads and stores PTB-XL and CPSC dataset at `./data`.
+
+For G12EC dataset, manually download from [link](https://www.kaggle.com/bjoernjostein/georgia-12lead-ecg-challenge-database/metadata) and place at `./data/G12EC`.
 
 ## Experiment
 
