@@ -11,6 +11,7 @@ Code used for In-depth Benchmarking of Deep Neural Network Architectures for ECG
 
 ## Data preparation
 
+### Download
 ```
 cd preparation
 ./get_dataset.sh
@@ -18,6 +19,14 @@ cd preparation
 This scripts downloads and stores PTB-XL and CPSC dataset at `./data`.
 
 For G12EC dataset, manually download from [link](https://www.kaggle.com/bjoernjostein/georgia-12lead-ecg-challenge-database/metadata) and place at `./data/G12EC`.
+
+### Preparation
+
+```
+poetry run python ptbxl.py
+poetry run python cpsc.py
+poetry run python g12ec.py
+```
 
 ## Experiment
 
