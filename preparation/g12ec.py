@@ -31,8 +31,10 @@ class G12ECPreparator:
         self.split_number = split_number
         self.min_sample_ratio = min_sample_ratio
 
-        self.load_dir = os.path.join(config.data_root, "WFDB")
-        self.save_dir = os.path.join(config.data_root, "processed")
+        self.load_dir = os.path.join(
+            config.data_root, config.dirname_g12ec, "WFDB")
+        self.save_dir = os.path.join(
+            config.data_root, config.dirname_g12ec, "processed")
         os.makedirs(self.save_dir, exist_ok=True)
 
     def _open_heafile(self, hea_file: str) -> Type[wfdb.io.record.Record]:
@@ -220,34 +222,4 @@ class G12ECPreparator:
         X.dump(self.save_dir + f'/X_{datatype}_seed{self.split_number}.npy', protocol=4)
         y.dump(self.save_dir + f'/y_{datatype}_seed{self.split_number}.npy', protocol=4)
 
-    def prepare(self):
-        """
-        Args:
-
-        Returns:
-
-        """
-        # Load G12EC data
-        signals, dxs, demographics = self._load_data()
-
-        processed_labels, label_index = self._process_label(dxs)
-        # processed_demos = self._process_demographics(demographics)
-
-        # Split data into train, valid, test
-        (X_train, y_train), (X_val, y_val), (X_test, y_test) =\
-            self._split_data(signals, processed_labels)
-
-        X_train, X_val, X_test = self._preprocess_signal(X_train, X_val, X_test)
-
-        self._dump_data(X_train, y_train, "train")
-        self._dump_data(X_val, y_val, "val")
-        self._dump_data(X_test, y_test, "test")
-        label_index.dump(self.save_dir + "/label_index.npy")
-
-if __name__ == "__main__":
-
-    SAMPLING_FREQUENCY = 500
-    for seed in range(1, 6):
-        print(f"Working on split_number: {seed} ...")
-        preparator = G12ECPreparator(SAMPLING_FREQUENCY, seed)
-        preparator.prepare()
+    def prepare(self)

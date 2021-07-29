@@ -1,5 +1,5 @@
-root = "."
-data_root = f"{root}"
+root = ".."
+data_root = f"{root}/data"
 save_dir = "./result"
 
 dirname_ptbxl = "PTBXL"

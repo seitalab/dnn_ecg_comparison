@@ -28,8 +28,10 @@ class CPSCPreparator(G12ECPreparator):
         self.sampling_frequency = sampling_frequency
         self.split_number = split_number
 
-        self.load_dir = os.path.join(config.data_root, "raw")
-        self.save_dir = os.path.join(config.data_root, "processed_modelclf")
+        self.load_dir = os.path.join(
+            config.data_root, config.dirname_cpsc, "raw")
+        self.save_dir = os.path.join(
+            config.data_root, config.dirname_cpsc, "processed_modelclf")
         os.makedirs(self.save_dir, exist_ok=True)
 
     def _open_ecg_files(self, target_files: List) -> List[np.ndarray]:
