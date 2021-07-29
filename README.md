@@ -23,5 +23,7 @@ cd experiment
 ```
 
 For grid search: `poetry run python experiment_0.py 0`
+
 For multi-label classification: `poetry run python experiment_1.py 0`
+
 For multi-class classification: `poetry run python experiment_2.py 0`
