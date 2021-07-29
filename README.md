@@ -8,6 +8,8 @@ Code used for In-depth Benchmarking of Deep Neural Network Architectures for ECG
 
 `pip install poetry`
 (Use python 3.8 or later)
+After installing poetry, execute
+`poetry install`
 
 ## Data preparation
 
