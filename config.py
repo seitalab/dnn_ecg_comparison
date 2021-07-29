@@ -1,6 +1,4 @@
-# root = "/home/nonaka/git/dnn_ecg_comparison"
-root = "/export/work/users/nonaka"
-# data_root = f"{root}/data"
+root = "."
 data_root = f"{root}"
 save_dir = "./result"
 
