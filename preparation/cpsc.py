@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 sys.path.append("..")
 import config
-from prepare_g12ec import G12ECPreparator
+from g12ec import G12ECPreparator
 
 class CPSCPreparator(G12ECPreparator):
 
