@@ -21,7 +21,7 @@ cd preparation
 ```
 This scripts downloads and stores PTB-XL and CPSC dataset at `./data`.
 
-For G12EC dataset, manually download from [link](https://www.kaggle.com/bjoernjostein/georgia-12lead-ecg-challenge-database/metadata) and place at `./data/G12EC`.
+For G12EC dataset, manually download from [link](https://www.kaggle.com/bjoernjostein/georgia-12lead-ecg-challenge-database/metadata), place at `./data/G12EC` and unzip the data.
 
 ### Preparation
 
