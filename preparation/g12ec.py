@@ -222,4 +222,36 @@ class G12ECPreparator:
         X.dump(self.save_dir + f'/X_{datatype}_seed{self.split_number}.npy', protocol=4)
         y.dump(self.save_dir + f'/y_{datatype}_seed{self.split_number}.npy', protocol=4)
 
-    def prepare(self)
+    def prepare(self):
+        """
+        Args:
+
+        Returns:
+
+        """
+        # Load G12EC data
+        signals, dxs, demographics = self._load_data()
+
+        processed_labels, label_index = self._process_label(dxs)
+        processed_demos = self._process_demographics(demographics)
+
+        # Split data into train, valid, test
+        (X_train, y_train), (X_val, y_val), (X_test, y_test) =\
+            self._split_data(signals, processed_labels)
+
+        X_train, X_val, X_test = self._preprocess_signal(X_train, X_val, X_test)
+
+        self._dump_data(X_train, y_train, "train")
+        self._dump_data(X_val, y_val, "val")
+        self._dump_data(X_test, y_test, "test")
+        label_index.dump(self.save_dir + "/label_index.npy")
+
+if __name__ == "__main__":
+    import sys
+
+    sampling_frequency = 500
+    # split_number = int(sys.argv[1])
+    for split_number in range(1, 6):
+        print(f"Working on split_number: {split_number} ...")
+        preparator = G12ECPreparator(sampling_frequency, split_number)
+        preparator.prepare()
